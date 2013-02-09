@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 
 import matplotlib
 matplotlib.use('TkAgg')
@@ -8,11 +8,15 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 from matplotlib.figure import Figure
 
 import sys
-from tkinter import *
+#import everything from tkinter module (Tkinter in python 2.x)
+try:
+        from tkinter import *
+except:
+        from Tkinter import *
 
 #application class
 class runapp(Frame):
-	''' gui for cts chamber (uses oven.exe as backend) '''
+	''' dummy gui '''
 	
 	def __init__(self,master=None):
 		self.root = Tk()
